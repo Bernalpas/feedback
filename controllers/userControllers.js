@@ -17,7 +17,7 @@ const paginaError = (req, res) => {
 }
 
 const paginaLogin = (req, res) => {
-    res.status(500).send(`<h1>Página para el Login</h1>`)
+    res.status(500).render('login');
 }
 
 const paginaRegistro = (req, res) => {
@@ -117,9 +117,7 @@ const loginUsuario = async (req, res) => {
 
 
         if(validarPassword){
-            return res.status(400).json({
-                Administracion: 'Bienvenido Administrador'
-            })
+            return res.status(200).render('admin')
         }else{
             return res.status(400).json({
                 Error: 'Password incorrecto'
