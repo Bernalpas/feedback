@@ -7,7 +7,7 @@ const MONGOLOCAL = process.env.MONGOLOCAL;
 const MONGOATLAS = process.env.MONGOATLAS;
 
 //Conexión a la database de Mongo - 2
-mongoose.connect(MONGOATLAS, {
+mongoose.connect(MONGOLOCAL, {
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
 })
